@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <form class="col-4 formStyle" [formGroup]="bookingForm" (ngSubmit)='booking()' >
+      <div class="mb-3">
+        <label class="form-label">Insert Your Name</label>
+        <input class="form-control" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Your Number</label>
+        <input type="text" class="form-control" formControlName="number">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Your Email</label>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Medical department</label>
+        <input type="text" class="form-control" formControlName="medicalDepartment">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Doctor Name</label>
+        <input type="text" class="form-control" formControlName="doctorName">
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>book a Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button type="submit" class="btn btn-primary blk">Submit</button>
+    </form>
+
+</div>

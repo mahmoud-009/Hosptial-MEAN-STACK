@@ -1,0 +1,61 @@
+<section class="container my-5">
+  <form class="form-group col-4" [formGroup]="doctorForm" (ngSubmit)='submitrequest()'>
+    <div class="mb-3">
+    <label   class="form-label">Add the name</label>
+    <input placeholder="name" class="form-control" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label   class="form-label">Add the number</label>
+   <input placeholder="specialty" class="form-control" formControlName="number">
+  </div>
+   <div class="mb-3">
+ <label   class="form-label">Add the email</label>
+    <input placeholder="age" class="form-control" formControlName="email">
+  </div>
+    <div class="mb-3">
+    <label   class="form-label">Add the medical department</label>
+    <input placeholder="email" class="form-control" formControlName="medicalDepartment">
+    </div>
+    <div class="mb-3">
+      <label   class="form-label">Add the password</label>
+      <input placeholder="address" class="form-control" formControlName="password">
+    </div>
+    <label class="btn btn-default p-0">
+      <input type="file" formControlName="userProfile"/>
+    </label>
+
+
+    <button class="btn btn-primary">Submit Request</button>
+  </form>
+
+</section>
+<section class="container text-center">
+  <table class="table  table-hover table-striped my-3">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">name</th>
+        <th scope="col">number</th>
+        <th scope="col">email</th>
+        <th scope="col">medicalDepartment</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let d of doctors">
+        <td scope="row"> {{d.userId}}</td>
+        <td> {{d.name}}</td>
+        <td> {{d.number}}</td>
+        <td> {{d.email}}</td>
+        <td> {{d.medicalDepartment}}</td>
+       <td><button class=" btn btn-success"  >Edit</button>
+        <button class=" btn btn-primary mx-1"  >Send an email</button>
+        <button class=" btn btn-danger mx-1"  >Deactivate</button>
+        <button class=" btn btn-danger mx-1"  >Delete</button></td>
+
+
+      </tr>
+    </tbody>
+  </table>
+</section>
+

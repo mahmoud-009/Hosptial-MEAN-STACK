@@ -1,0 +1,40 @@
+<section class="container my-5">
+  <form class="form-group col-4" [formGroup]="userForm" (ngSubmit)='submitrequest()'>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="name" class="form-control mb-3" formControlName="name">
+    <div *ngIf="name?.invalid && (name?.touched||name?.dirty)" class="alert alert-danger">
+      <div *ngIf="name?.errors?.required">name is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="specialty" class="form-control mb-3" formControlName="specialty">
+    <div *ngIf="specialty?.invalid && (specialty?.touched||specialty?.dirty)" class="alert alert-danger">
+      <div *ngIf="specialty?.errors?.required">specialty is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="age" class="form-control mb-3" formControlName="age">
+    <div *ngIf="age?.invalid && (age?.touched||age?.dirty)" class="alert alert-danger">
+      <div *ngIf="age?.errors?.required">age is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="email" class="form-control mb-3" formControlName="email">
+    <div *ngIf="email?.invalid && (email?.touched||email?.dirty)" class="alert alert-danger">
+      <div *ngIf="email?.errors?.required">email is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="address" class="form-control mb-3" formControlName="address">
+    <div *ngIf="address?.invalid && (address?.touched||address?.dirty)" class="alert alert-danger">
+      <div *ngIf="address?.errors?.required">address is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="phone" class="form-control mb-3" formControlName="phone">
+    <div *ngIf="phone?.invalid && (phone?.touched||phone?.dirty)" class="alert alert-danger">
+      <div *ngIf="phone?.errors?.required">phone is required</div>
+    </div>
+    <label class="form-label">Insert Your Name</label>
+    <input placeholder="dgree" class="form-control mb-3" formControlName="dgree">
+    <div *ngIf="dgree?.invalid && (dgree?.touched||dgree?.dirty)" class="alert alert-danger">
+      <div *ngIf="dgree?.errors?.required">dgree is required</div>
+    </div>
+    <button class="btn btn-primary">Submit Request</button>
+  </form>
+</section>

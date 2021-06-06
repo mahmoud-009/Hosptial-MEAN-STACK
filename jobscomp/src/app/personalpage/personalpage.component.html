@@ -1,0 +1,38 @@
+
+<!-- <div *ngIf="_userService.userStatus; " >
+  <app-signin></app-signin>
+</div> -->
+
+<!-- <form   [formGroup]="pictureForm" (ngSubmit)='upload()'>
+  <input type="file"    formControlName="picture"/>
+  <button type="submit">Upload your photo</button>
+</form> -->
+<app-upload-image
+></app-upload-image>
+<div class="container my-5">
+  {{_userService.userStatus}}
+  <div class="">
+    <div class="personal-pic d-flex align-items-end">
+      <button class="btn change-img ">Change</button>
+    </div>
+
+  </div>
+  <div class="">
+    <div class="doctor-name">
+     Doctor Name
+    </div>
+  </div>
+  <div class="card m-3" style="width: 18rem;" *ngFor=" let d of articles" >
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">{{d.articleTopic}}</h5>
+      <p class="card-text">{{d.article}}</p>
+      <a href="#" class="btn btn-primary">Open The Article</a>
+      <a href="#" class="btn btn-danger">Delete</a>
+    </div>
+
+</div>
+
+
+
+</div>

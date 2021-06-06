@@ -1,0 +1,20 @@
+.personal-pic{
+  width: 200px;
+  height:200px;
+  background-color: aqua;
+
+}
+.change-img{
+  color: transparent;
+  width: 100%;
+}
+.personal-pic:hover .change-img{
+  color: black;
+
+  background-color: rgb(230, 224, 224);
+}
+.doctor-name{
+
+   
+  font-size: 35px;
+}

@@ -1,0 +1,29 @@
+<section class="container">
+  <table class="table  table-hover table-striped my-3">
+    <thead>
+      <tr>
+        <th scope="col">userId</th>
+        <th scope="col">name</th>
+        <th scope="col">number</th>
+        <th scope="col">email</th>
+        <th scope="col">medicalDepartment</th>
+        <th scope="col">doctorName</th>
+        <th scope="col">date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let d of bookings">
+        <td scope="row"> {{d.userId}}</td>
+        <td> {{d.name}}</td>
+        <td> {{d.number}}</td>
+        <td> {{d.email}}</td>
+        <td> {{d.medicalDepartment}}</td>
+        <td> {{d.doctorName}}</td>
+        <td> {{d.date}}</td>
+       <!-- <td><button class=" btn btn-danger" (click)="removeRequest(d._id)">Reject</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+</section>
+
