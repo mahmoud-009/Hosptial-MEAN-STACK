@@ -47,7 +47,7 @@ this.mypage()
       console.log(res)
 
 this.data.push(res)
-   
+
 
 
     })
