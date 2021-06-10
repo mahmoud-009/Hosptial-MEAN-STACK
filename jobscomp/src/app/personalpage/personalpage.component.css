@@ -1,20 +1,21 @@
-.personal-pic{
-  width: 200px;
-  height:200px;
-  background-color: aqua;
+.container{
+  background:rgb(172, 171, 171);
+}
+.profile-pic{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid gray;;
+}
 
-}
-.change-img{
-  color: transparent;
-  width: 100%;
-}
-.personal-pic:hover .change-img{
-  color: black;
-
-  background-color: rgb(230, 224, 224);
-}
 .doctor-name{
-
-   
-  font-size: 35px;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+.acadmy-name{
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.major-name{
+  font-size: 20px;
 }

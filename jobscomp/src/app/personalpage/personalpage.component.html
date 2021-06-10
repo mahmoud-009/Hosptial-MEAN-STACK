@@ -7,22 +7,64 @@
   <input type="file"    formControlName="picture"/>
   <button type="submit">Upload your photo</button>
 </form> -->
-<app-upload-image
-></app-upload-image>
-<div class="container my-5">
-  {{_userService.userStatus}}
-  <div class="">
-    <div class="personal-pic d-flex align-items-end">
-      <button class="btn change-img ">Change</button>
-    </div>
+<!-- <app-upload-image
+></app-upload-image> -->
+{{_userService.userStatus}}
 
-  </div>
-  <div class="">
-    <div class="doctor-name">
-     Doctor Name
+  <div class="container px-4">
+    <div class="row gx-5">
+      <div class="col-7">
+       <div class="p-3 border bg-light row">
+         <div class="col-3">
+          <img class="profile-pic" src="/assets/pro1.jpg" alt="">
+         </div>
+        <div class="col p-0 mt-3">
+          <div class="doctor-name">Doctor Ali Samer</div>
+          <div class="acadmy-name">Alexandria University</div>
+          <div class="major-name">Dentist</div>
+          <div>
+            <div>Rating</div>
+          </div>
+        </div>
+        </div>
+        <div class="p-3 border bg-light   mt-3">
+          <div>
+            <span>About the Doctor:</span>
+          </div>
+          <div>
+           <span>he studied at Alexadnria university</span>
+          </div>
+         </div>
+         <div class="p-3 border bg-light   mt-3">
+          <div>
+            <span>Patients' Reviews:</span>
+          </div>
+          <div>
+            <div class="text-center">
+              <div>Over Rating</div>
+              <div>From 14 Visitors</div>
+            </div>
+
+<div class="row mt-2 text-center">
+  <div class="col">Assistant Rating</div>
+  <div class="col">Clinic Rating</div>
+  <div class="col">Doctor Rating</div>
+
+</div>
+
+          </div>
+         </div>
+      </div>
+      <div class="col-5">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
     </div>
   </div>
-  <div class="card m-3" style="width: 18rem;" *ngFor=" let d of articles" >
+
+
+
+
+<div class="card m-3" style="width: 18rem;" *ngFor=" let d of articles" >
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
       <h5 class="card-title">{{d.articleTopic}}</h5>
@@ -35,4 +77,4 @@
 
 
 
-</div>
+
