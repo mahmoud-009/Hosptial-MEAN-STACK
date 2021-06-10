@@ -12,16 +12,16 @@
 {{_userService.userStatus}}
 
   <div class="container px-4">
-    <div class="row gx-5">
+    <div class="row gx-5" *ngFor=" let d of data">
       <div class="col-7">
        <div class="p-3 border bg-light row">
          <div class="col-3">
           <img class="profile-pic" src="/assets/pro1.jpg" alt="">
          </div>
         <div class="col p-0 mt-3">
-          <div class="doctor-name">Doctor Ali Samer</div>
-          <div class="acadmy-name">Alexandria University</div>
-          <div class="major-name">Dentist</div>
+          <div class="doctor-name">{{d.name}}</div>
+          <div class="acadmy-name">{{d.acadimic}}</div>
+          <div class="major-name">{{d.Specialty}}</div>
           <div>
             <div>Rating</div>
           </div>

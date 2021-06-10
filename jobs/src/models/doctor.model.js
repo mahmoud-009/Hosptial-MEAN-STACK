@@ -15,9 +15,12 @@ number:{
 email:{
     type:String,
 },    
-medicalDepartment:{
+Specialty:{
     type:String,
     trim:true},
+acadimic:{
+    type:String
+},
 password:{
         type:String,
         trim:true

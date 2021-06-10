@@ -14,8 +14,9 @@ doctorForm = new FormGroup({
   name:new FormControl(),
   number:new FormControl(),
   email:new FormControl(),
-  medicalDepartment:new FormControl(),
+  Specialty:new FormControl(),
   password:new FormControl(),
+  acadimic:new FormControl(),
   userProfile:new FormControl()
 })
   constructor(private _user:UserservicesService,private _router: Router) { }

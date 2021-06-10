@@ -23,13 +23,22 @@ router.post('/register', async(req, res)=>{
         })
     } 
 } )
-router.get('/showdoctors', async(req, res)=>{
+router.get('/showdoctors',   async(req, res)=>{
     try{
         const users = await doctors.find()
         res.send(users)
     }
     catch(e){res.send(e)}
 })
+ 
+// router.get('/doctorprofile', auth,async(req,res)=>{
+//     try{
+//         const user = await doctors.findById({_id})
+//         res.send(user)
+//         console.log(user)
+//     }
+//     catch(e){res.send(e)}
+// })
 router.get('/activate/:id', async(req, res)=>{
     try{
         const _id= req.params.id
@@ -75,6 +84,7 @@ router.post('/login',async(req,res)=>{
 
 router.get('/mypage', auth,async(req,res)=>{
     res.send(req.user)
+    console.log(req.user)
 })
 
 router.post('/logout', auth, async(req, res)=>{

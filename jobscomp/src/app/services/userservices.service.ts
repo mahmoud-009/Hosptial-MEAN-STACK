@@ -40,6 +40,10 @@ export class UserservicesService {
   showDoctor():Observable<any>{
     return this._http.get(`${this.commonUrl}/showdoctors`)
   }
+  doctorprofile():Observable<any>{
+    return this._http.get(`${this.commonUrl}/doctorprofile`)
+  }
+
   activateaccount(id:any):Observable<any>{
     return this._http.get(`${this.commonUrl}/activate/${id}`)
   }

@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./personalpage.component.css']
 })
 export class PersonalpageComponent implements OnInit {
-
+  data :any =[]
   pictureForm = new FormGroup({
     picture:new FormControl()
 
@@ -22,7 +22,9 @@ export class PersonalpageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-this.showminearticles()
+this.showminearticles(),
+this.mypage()
+
   }
 
   showminearticles(){
@@ -40,6 +42,16 @@ this.showminearticles()
   //     console.log('1111111')
   //   })
   // }
+  mypage() {
+    this._userService. mypage().subscribe(res=>{
+      console.log(res)
+
+this.data.push(res)
+   
+
+
+    })
+  }
 
 
 }
