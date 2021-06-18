@@ -10,10 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FindingdoctorComponent implements OnInit {
 
-  searchform  = new FormGroup({
-    name:new FormControl()
-  })
-
+  // searchform  = new FormGroup({
+  //   name:new FormControl()
+  // })
+  searchText:any;
   doctors:any =[]
   constructor(private _userService:UserservicesService,  private activatedRoute: ActivatedRoute) { }
 

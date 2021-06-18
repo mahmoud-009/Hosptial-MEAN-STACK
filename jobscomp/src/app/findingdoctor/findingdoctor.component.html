@@ -1,19 +1,28 @@
 <div class="container my-5">
-  <form class="d-flex col-3" [formGroup]="searchform" (ngSubmit)='searchfrom()'>
-    <input class="form-control me-2" type="search" formControlName="name" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit"  > Search</button>
-  </form>
-</div>
+<div class="row">
+  <div class="col-3">
+        <form class="my-3">
+          <label >Find your Doctor</label>
+          <input class="form-control me-2 my-1 d-block " type="search" placeholder="Search" aria-label="Search" name = "seachsText" placeholder="search" [(ngModel)]="searchText">
+        </form>
+  </div>
+  <div class="col-9">
 
-<div class="container d-flex flex-wrap justify-content-between">
-  <div class="card mx-3 my-3 " style="width: 18rem;" *ngFor=" let d of doctors">
-    <img src="/assets/pro1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h2 class="card-title">{{d.name}}</h2>
-      <hr>
-      <h3 class="card-text">{{d.Specialty}}</h3>
-      <h3 class="card-text">{{d.acadimic}}</h3>
-      <a href="#" class="btn btn-primary d-block">Show Page</a>
+    <div class="container d-flex flex-wrap justify-content-center">
+      <div class="card mx-3 my-3 " style="width: 15rem;" *ngFor=" let d of doctors | filter:searchText  ">
+        <img src="/assets/pro1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{d.name}}</h2>
+          <hr>
+          <h3 class="card-text">{{d.Specialty}}</h3>
+          <h3 class="card-text">{{d.acadimic}}</h3>
+          <a href="#" class="btn btn-primary d-block">Show Page</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+

@@ -1,17 +1,15 @@
-<div class="container my-5 flex">
+<div class="container my-5 flex flex-wrap">
 
-  <div class="card m-3" style="width: 18rem; height: 10rem" *ngFor=" let d of articles" >
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">{{d.articleTopic}}</h5>
-      <p class="card-text">{{d.article}}</p>
-      <a href="#" class="btn btn-primary">Open The Article</a>
-      <a href="#" class="btn btn-success mx-1">Go to Doctor's Page</a>
-    </div>
-
+<div class="card m-3 " style="width: 18rem;" *ngFor=" let d of articles">
+  <img src="assets/9.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h2 class="card-title m-0">{{d.articleTopic}} </h2>
+    <h3>By <a href="">Dr.ahmed</a></h3>
+    
+    <!-- <p class="card-text">{{d.article}}</p> -->
+    <a href="#" class="btn btn-primary d-block">Go somewhere</a>
+  </div>
 </div>
-
-
 
 </div>
 

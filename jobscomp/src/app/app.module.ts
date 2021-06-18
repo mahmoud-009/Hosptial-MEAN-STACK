@@ -28,6 +28,8 @@ import { RegisterComponent } from './register/register.component';
 import { ActivateaccountComponent } from './activateaccount/activateaccount.component';
 import { UserInterceptor } from './providers/interceptors/user.interceptor';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SinglearticleComponent } from './singlearticle/singlearticle.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     FindingdoctorComponent,
     RegisterComponent,
     ActivateaccountComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    SinglearticleComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     MatNativeDateModule,
     MatInputModule,
     MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    Ng2SearchPipeModule
 
 
 
