@@ -4,3 +4,12 @@
   height: 150px;
   border: 1px solid gray;;
 }
+h2{
+  margin-bottom: 1px !important;
+}
+h3{
+  margin-bottom: 1px ;
+}
+hr{
+  margin: 0 !important;
+}

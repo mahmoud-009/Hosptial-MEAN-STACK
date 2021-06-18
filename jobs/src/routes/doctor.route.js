@@ -84,8 +84,55 @@ router.post('/login',async(req,res)=>{
 
 router.get('/mypage', auth,async(req,res)=>{
     res.send(req.user)
-    console.log(req.user)
+   
 })
+
+router.get('/finddoctor',async(req,res)=>{
+     
+    try{
+        const users = await doctors.find()
+        const filters  = req.query;
+        const filteredUsers = users.filter(user =>{
+            let isValid = true;
+            for (key in filters){
+                // console.log(key, userw[key], filters[key]);
+                isValid = isValid && user[key] == filters[key];
+            }
+            return isValid;
+        })
+
+        console.log(filters)
+        // res.send(searchQuery)
+       res.send(filteredUsers)
+    }
+    catch(e){res.send(e)}
+
+})
+
+ 
+
+
+ 
+// app.use('/', (req, res, next) => {
+//     const filters = req.query;
+//     const filteredUsers = data.filter(user => {
+//       let isValid = true;
+//       for (key in filters) {
+//         console.log(key, user[key], filters[key]);
+//         isValid = isValid && user[key] == filters[key];
+//       }
+//       return isValid;
+//     });
+//     res.send(filteredUsers);
+//   });
+
+
+
+
+
+
+
+
 
 router.post('/logout', auth, async(req, res)=>{
     try{

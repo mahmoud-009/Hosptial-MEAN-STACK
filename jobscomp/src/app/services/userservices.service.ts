@@ -63,4 +63,10 @@ export class UserservicesService {
   uploadpic(pic:any):Observable<any>{
     return this._http.post(`${this.commonUrl}/profile`,pic)
   }
+
+
+  searchfrom():Observable<any>{
+    return this._http.get(`${this.commonUrl}/finddoctor/`,)
+  }
+
 }

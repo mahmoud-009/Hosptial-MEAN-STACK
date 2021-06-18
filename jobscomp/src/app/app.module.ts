@@ -9,7 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { FormappComponent } from './applyforjob/formapp.component';
 import { NavComponent } from './shared/nav/nav.component';
@@ -58,7 +58,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
 
 
 

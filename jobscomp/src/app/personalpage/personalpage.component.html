@@ -59,21 +59,34 @@
         <div class="p-3 border bg-light">Custom column padding</div>
       </div>
     </div>
-  </div>
 
 
 
 
-<div class="card m-3" style="width: 18rem;" *ngFor=" let d of articles" >
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">{{d.articleTopic}}</h5>
-      <p class="card-text">{{d.article}}</p>
-      <a href="#" class="btn btn-primary">Open The Article</a>
-      <a href="#" class="btn btn-danger">Delete</a>
+
+  <mat-tab-group>
+    <mat-tab label="Articles">
+      <div class="card  my-3" style="width: 18rem;" *ngFor=" let d of articles" >
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h2 class="card-title">{{d.articleTopic}}</h2>
+          <p class="card-text">{{d.article}}</p>
+          <a href="#" class="btn btn-primary">Open The Article</a>
+          <a href="#" class="btn btn-danger mx-3">Delete</a>
+        </div>
+
     </div>
 
-</div>
+
+    </mat-tab>
+    <mat-tab label="Reviews"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>
+
+
+
+  </div>
+
 
 
 
